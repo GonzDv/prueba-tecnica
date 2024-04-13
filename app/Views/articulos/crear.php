@@ -1,8 +1,20 @@
 <?= $this->extend('plantilla'); ?>
 
 <?= $this->section('content'); ?>
-
-<h3>
+    <div>
+        <span>
+            <a href="<?= base_url('articulos'); ?>"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+    </svg>
+    </a>
+        </span>
+</div>
+<?php if (session()->getFlashdata('error') !== null) { ?>
+    <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400">
+        <?= session()->getFlashdata('error'); ?>
+    </div>
+<?php } ?>
+<h3 class="text-3xl text-center m-5">
     Nuevo articulo
 </h3>
 
@@ -13,7 +25,7 @@
     </div>
     <div class="mb-5 form-group">
         <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="meta_description">Meta descripcion</label>
-        <input type="text" name="meta_description" id="meta_description" class="form-control block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <input type="text" name="meta_descripcion" id="meta_descripcion" class="form-control block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
     </div>
     <div class="mb-5 form-group">
         <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="titulo">Titulo</label>

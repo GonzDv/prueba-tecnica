@@ -2,7 +2,7 @@
 <html lang="en" class="h-screen">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to CodeIgniter 4!</title>
+    <title>Welcome to Upper Logistics</title>
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
@@ -15,13 +15,13 @@
 
 <!-- HEADER: MENU + HEROE SECTION with tailwindcss  -->
 <header class="bg-gray-800 py-4">
-    <nav class="container mx-auto flex justify-between items-center">
+    <nav class="container p-2 mx-auto flex justify-between items-center">
         <a href="/" class="text-white font-bold uppercase">Upper Logistics</a>
         <ul class="flex">
-            <li><a href="<?=base_url('/'); ?>" class="text-white">Home</a></li>
-            <li><a href=""<?=base_url('articulos'); ?>" class="text-white ml-4">Articulos</a></li>
-            <li><a href="#about" class="text-white ml-4">Sobre nosotros</a></li>
-            <li><a href="#contact" class="text-white ml-4">Contact</a></li>
+            <li><a href="<?=base_url('/'); ?>" class="px-5 py-3 bg-white text-black rounded-lg">Home</a></li>
+            <li><a href="<?=base_url('articulos'); ?>" class="text-white ml-4 px-5 py-3 hover:bg-white hover:text-black rounded-lg">Articulos</a></li>
+            <li><a href="#about" class="text-white ml-4 px-5 py-3 hover:bg-white hover:text-black rounded-lg">Sobre nosotros</a></li>
+            <li><a href="#contact" class="text-white ml-4 px-5 py-3 hover:bg-white rounded-lg ">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -36,24 +36,22 @@
 <main class="py-12">
     <div class="container mx-auto">
         <?= $this->renderSection('content') ?>
-        hola
+        
     </div>
 </main>
 
-<!--ABOUT SECTION with tailwindcss -->
+<!--ABOUT SECTION-->
+
 <section class="py-12">
     <div class="container mx-auto">
-        <h2 class="text-3xl font-bold">About</h2>
-        <p class="mt-4 text-lg">CodeIgniter 4 is the latest version of the framework, intended to be light, fast and fully featured framework for building web applications. It is the first installment of the framework that is not compatible with the previous versions, and we have built it to be the most powerful CodeIgniter to date.</p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis error repellat maxime voluptatem culpa harum odio mollitia rem atque, fuga explicabo distinctio neque expedita laudantium similique quidem? Eligendi, atque odio.
-        Blanditiis harum quidem recusandae consequatur quis quos aperiam ab veritatis quae sequi, quod mollitia culpa a debitis inventore, fugit laudantium, nulla voluptas est officiis at sed minima. Culpa, nobis rem?
-        Fugit nihil, minima praesentium omnis iste, suscipit minus accusamus quam amet officiis illo nisi earum aliquam voluptas nostrum beatae eum placeat rem assumenda maxime? Officiis qui autem velit minima inventore.
+        <?= $this->renderSection('content') ?>
+        desde plantilla
     </div>
 </section>
 
 
 
-<!--CONTACT SECTION with tailwindcss -->
+<!--CONTACT SECTION -->
 <section class="bg-gray-900 text-white py-12">
     <div class="container mx-auto">
         <h2 class="text-3xl font-bold">Contact</h2>

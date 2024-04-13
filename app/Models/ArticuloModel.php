@@ -8,7 +8,10 @@ class ArticuloModel extends Model
 {
     protected $table = 'articulos';
     protected $primaryKey = 'id';
-
+    protected $useAutoIncrement = true;
+    protected $returnType       = 'array';
+    protected $useSoftDeletes   = false;
+    protected $protectFields    = true;
     protected $allowedFields = [
         'meta_titulo',
         'meta_descripcion',
@@ -19,5 +22,9 @@ class ArticuloModel extends Model
         'publish_date',
     ];
 
+    protected $useTimestamps = true;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
     
 }
