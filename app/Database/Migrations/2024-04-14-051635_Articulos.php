@@ -33,20 +33,23 @@ class Articulos extends Migration
             ],
             'imagen' => [
                 'type' => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '255', 
                 'null' => true
             ],
             'contenido_articulo' => [
-                'type' => 'TEXT',
+                'type' => 'TINYTEXT',
                 'null' => true
             ],
             'publish_date' => [
                 'type' => 'DATETIME',
                 'null' => true
             ],
+            'created_at timestamp default current_timestamp',
+            'updated_at timestamp default current_timestamp on update current_timestamp',
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('articulos');
+        
     }
 
     public function down()

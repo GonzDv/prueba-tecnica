@@ -15,10 +15,10 @@
     </div>
 <?php } ?>
 <h3 class="text-3xl text-center m-5">
-    Nuevo articulo
+    Editar articulo
 </h3>
 
-<form class="max-w-sm mx-auto bg-gray" action="<?= base_url('articulos/' . $articulo['id']); ?>" method="post">
+<form class="max-w-sm mx-auto bg-gray" action="<?= base_url('articulos/' . $articulo['id']); ?>" method="POST">
 
     <input type="hidden" name="_method" value="PUT">
     <input type="hidden" name="id" value="<?= $articulo['id'] ?>">
@@ -44,9 +44,11 @@
         type="text" name="descripcion" id="descripcion" class="form-control block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
     </div>
     <div class="mb-5 form-group">
-        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar">Imagen</label>
-        <input 
-        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="imagen_articulos">Imagen</label>
+        <input accept="image/*"
+        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" 
+        name="imagen-articulo"
+        aria-describedby="user_avatar_help" id="imagen-articulo" type="file">
     </div>
     <div class="mb-5 form-group">
         <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="contenido_articulo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contenido articulo</label>
@@ -58,6 +60,8 @@
         <input value="<?= $articulo['publish_date'] ?>" 
         type="date" name="publish_date" id="publish_date" class="form-control block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
     </div>
-    <button type="submit" class="place-items-center text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 rounded-lg">Guardar</button>
+        <button type="submit" class="place-items-center text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 rounded-lg">
+            Guardar</button>
+
 </form>
 <?= $this->endSection(); ?>
